@@ -49,16 +49,16 @@ for(let i = 0; i < teamMembers.length; i++){
   // estrapolo i valori dagli oggetti 
   const {name, role, email, img} = membroIesimo;
 
-  cards += `<div class="col-4 card mb-3 me-4 bg-black text-white" style="max-width: 410px;">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="${img}" class="img-fluid rounded-start" alt="...">
+  cards += `<div class="col-12 col-sm-6 col-md-6 col-lg-4 card-lg mb-3 me-4 bg-black text-white" style="max-width: 410px;">
+                <div class="row g-1 g-sm-2">
+                  <div class="col col-sm-4 col-md-4 col-lg-4">
+                    <img src="${img}" class="img-fluid rounded-start " alt="...">
                   </div>
-                  <div class="col-md-8">
+                  <div class="col col-sm-4 col-md-8 col-lg-8">
                     <div class="card-body">
-                      <h5 class="card-title fw-bolder">${name}</h5>
+                      <h5 class="card-title fw-bold">${name}</h5>
                       <p class="card-text">${role}</p>
-                      <p class="card-text">${email}<small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                      <p class="card-text text-info">${email}<small class="text-body-secondary">Last updated 3 mins ago</small></p>
                     </div>
                   </div>
                 </div>
