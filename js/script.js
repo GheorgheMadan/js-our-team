@@ -37,11 +37,36 @@ const teamMembers = [
   }
 ];
 
-const outputCard = document.getElementById('output')
+const outputCard = document.querySelector('.output')
 
-let cards = ''
+let cards = "";
 // creo un ciclo for per stampare in pagina le card 
 for(let i = 0; i < teamMembers.length; i++){
   let membroIesimo = teamMembers[i];
-  console.log(membroIesimo)
+  // verifico se funziona stampo il risultato in console
+  // console.log(membroIesimo)
+
+  // estrapolo i valori dagli oggetti 
+  const {name, role, email, img} = membroIesimo;
+
+  cards += `<div class="col-4 card mb-3 me-4 bg-black text-white" style="max-width: 410px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="${img}" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title fw-bolder">${name}</h5>
+                      <p class="card-text">${role}</p>
+                      <p class="card-text">${email}<small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+            `
+  // console.log(cards)
+  outputCard.innerHTML = cards
 }
+
+
